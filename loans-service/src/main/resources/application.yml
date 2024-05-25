@@ -8,9 +8,12 @@ spring:
   h2:
     console:
       enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
 
 server:
-  port: 9003
+  port: 9005
     
 management:
   endpoints:
