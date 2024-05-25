@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: cards-service
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:cards_service
+    password:
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 9002
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

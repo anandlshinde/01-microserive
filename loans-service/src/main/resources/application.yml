@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: loans-service
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:loans_service
+    password:
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 9003
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
