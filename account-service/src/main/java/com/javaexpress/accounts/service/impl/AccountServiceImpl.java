@@ -3,19 +3,18 @@ package com.javaexpress.accounts.service.impl;
 import java.util.Optional;
 import java.util.Random;
 
+import com.javaexpress.accounts.dto.AccountDto;
+import com.javaexpress.accounts.dto.CustomerDto;
+import com.javaexpress.accounts.entity.Account;
+import com.javaexpress.accounts.entity.Customer;
+import com.javaexpress.accounts.exception.CustomerAlreadyExistsException;
+import com.javaexpress.accounts.exception.ResourceNotFoundException;
+import com.javaexpress.accounts.mapper.AccountMapper;
+import com.javaexpress.accounts.mapper.CustomerMapper;
+import com.javaexpress.accounts.repository.AccountRepository;
+import com.javaexpress.accounts.repository.CustomerRepository;
+import com.javaexpress.accounts.service.AccountService;
 import org.springframework.stereotype.Service;
-
-import com.sbms.accounts.dto.AccountDto;
-import com.sbms.accounts.dto.CustomerDto;
-import com.sbms.accounts.entity.Account;
-import com.sbms.accounts.entity.Customer;
-import com.sbms.accounts.exception.CustomerAlreadyExistsException;
-import com.sbms.accounts.exception.ResourceNotFoundException;
-import com.sbms.accounts.mapper.AccountMapper;
-import com.sbms.accounts.mapper.CustomerMapper;
-import com.sbms.accounts.repository.AccountRepository;
-import com.sbms.accounts.repository.CustomerRepository;
-import com.sbms.accounts.service.AccountService;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -24,7 +23,7 @@ import lombok.RequiredArgsConstructor;
  */
 @Service
 @RequiredArgsConstructor
-public class AccountServiceImpl implements AccountService{
+public class AccountServiceImpl implements AccountService {
 	
 	private final AccountRepository accountRepository;
 	private final CustomerRepository customerRepository;
@@ -33,7 +32,7 @@ public class AccountServiceImpl implements AccountService{
 	public void createAccount(CustomerDto customerDto) {
 		// TODO Auto-generated method stub
 		//Convert customerDto to Customer entity
-		Customer customer=CustomerMapper.mapToCustomer(customerDto, new Customer());
+		Customer customer= CustomerMapper.mapToCustomer(customerDto, new Customer());
 		// validate mobileNumber in database
 		Optional<Customer> cutomerObj=customerRepository.findByMobileNumber(customerDto.getMobileNumber());
 		if(cutomerObj.isPresent()) {

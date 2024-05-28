@@ -1,6 +1,6 @@
 package com.javaexpress.accounts.service;
 
-import com.sbms.accounts.dto.CustomerDto;
+import com.javaexpress.accounts.dto.CustomerDto;
 
 /**
  * @author anand

@@ -1,8 +1,9 @@
 package com.javaexpress.accounts.controller;
 
+import com.javaexpress.accounts.dto.AccountsContactInfo;
+import com.javaexpress.accounts.dto.CustomerDto;
+import com.javaexpress.accounts.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,10 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.sbms.accounts.dto.AccountsContactInfo;
-import com.sbms.accounts.dto.CustomerDto;
-import com.sbms.accounts.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
 
 /**
