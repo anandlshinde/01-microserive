@@ -5,10 +5,6 @@ import java.util.Optional;
 import com.javaexpress.accounts.entity.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.web.bind.annotation.Mapping;
-
-import com.sbms.accounts.entity.Account;
-
 import jakarta.transaction.Transactional;
 
 /**

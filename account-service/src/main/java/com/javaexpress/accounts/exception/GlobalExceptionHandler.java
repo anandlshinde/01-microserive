@@ -5,13 +5,11 @@ package com.javaexpress.accounts.exception;
 
 import java.time.LocalDateTime;
 
-import com.sbms.accounts.exception.CustomerAlreadyExistsException;
+import com.javaexpress.accounts.dto.ErrorResponseDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import com.sbms.accounts.dto.ErrorResponseDto;
 
 /**
  * @author anand

@@ -3,8 +3,9 @@
  */
 package com.javaexpress.accounts.mapper;
 
-import com.sbms.accounts.dto.CustomerDto;
-import com.sbms.accounts.entity.Customer;
+
+import com.javaexpress.accounts.dto.CustomerDto;
+import com.javaexpress.accounts.entity.Customer;
 
 /**
  * @author anand
@@ -12,7 +13,7 @@ import com.sbms.accounts.entity.Customer;
  */
 public class CustomerMapper {
 	
-	public static CustomerDto mapToCustomerDto(Customer customer,CustomerDto customerDto) {
+	public static CustomerDto mapToCustomerDto(Customer customer, CustomerDto customerDto) {
 		customerDto.setName(customer.getName());
 		customerDto.setEmail(customer.getEmail());
 		customerDto.setMobileNumber(customer.getMobileNumber());

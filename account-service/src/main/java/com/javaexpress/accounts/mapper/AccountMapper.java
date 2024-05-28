@@ -3,8 +3,9 @@
  */
 package com.javaexpress.accounts.mapper;
 
-import com.sbms.accounts.dto.AccountDto;
-import com.sbms.accounts.entity.Account;
+
+import com.javaexpress.accounts.dto.AccountDto;
+import com.javaexpress.accounts.entity.Account;
 
 /**
  * @author anand
@@ -12,7 +13,7 @@ import com.sbms.accounts.entity.Account;
  */
 public class AccountMapper {
 	
-	public static AccountDto mapToAccountDto(Account account,AccountDto accountDto) {
+	public static AccountDto mapToAccountDto(Account account, AccountDto accountDto) {
 		accountDto.setAccountNumber(account.getAccountNumber());
 		accountDto.setAccountType(account.getAccountType());
 		accountDto.setBranchAddress(account.getBranchAddress());

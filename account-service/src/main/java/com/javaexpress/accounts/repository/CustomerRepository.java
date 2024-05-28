@@ -4,9 +4,6 @@ import java.util.Optional;
 
 import com.javaexpress.accounts.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.sbms.accounts.entity.Customer;
-
 /**
  * @author anand
  *
