@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: accounts
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:testdb
+    password: 
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+  config:
+    import: "configserver:http://localhost:9001/"
+  profiles:
+    active: "prod"
+
+server:
+  port: 9003
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'  
+
