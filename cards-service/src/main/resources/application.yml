@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cards-service
+    name: cards
   datasource:
     username: sa
     url: jdbc:h2:mem:cards_service
@@ -11,12 +11,16 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-
+  config:
+    import: "configserver:http://localhost:9001/"
+  profiles:
+    active: "prod"
 server:
   port: 9004
-    
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+
+
