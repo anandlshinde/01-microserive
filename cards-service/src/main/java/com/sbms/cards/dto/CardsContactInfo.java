@@ -13,7 +13,7 @@ import java.util.Map;
 @ConfigurationProperties(prefix = "cards")
 @Setter
 @Getter
-public class AccountsContactInfo {
+public class CardsContactInfo {
 
 	private String message;
 	private Map<String,String> contactDetails;

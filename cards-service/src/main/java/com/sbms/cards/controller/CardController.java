@@ -1,6 +1,6 @@
 package com.sbms.cards.controller;
 
-import com.sbms.cards.dto.AccountsContactInfo;
+import com.sbms.cards.dto.CardsContactInfo;
 import com.sbms.cards.dto.CardDto;
 import com.sbms.cards.service.CardService;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class CardController {
 
     private final CardService cardService;
-    private final AccountsContactInfo accountsContactInfo;
+    private final CardsContactInfo accountsContactInfo;
 
 
     @PostMapping("/create")
@@ -39,7 +39,7 @@ public class CardController {
     }
 
     @GetMapping("/contact-info")
-    public AccountsContactInfo getContactInfo() {
+    public CardsContactInfo getContactInfo() {
         log.info("accountinfo : ");
         return accountsContactInfo;
     }
