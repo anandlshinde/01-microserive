@@ -25,3 +25,12 @@ eureka:
       defaultZone: http://localhost:9002/eureka/
   instance:
     prefer-ip-address: true
+    
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        sliding-window-size: 5
+        permitted-number-of-calls-in-half-open-state: 2
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 10s
